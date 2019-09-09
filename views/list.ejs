@@ -1,0 +1,23 @@
+<% /* eslint-disable */ %>
+<div class="container">
+  <div class="scroll-block">
+    <div class="block existing">
+      <% if (output && output.length > 0) { %>
+      <ul>
+        <% output.map((item, index) => { %>
+          <li value="<%= item.ID %>" class="<%= item.Completed ? " item-completed" : "" %>">
+            <div class="item-container">
+              <input type="checkbox" class="item-check" <%= item.Completed ? "disabled" : "" %> />
+              <span class="item-text">
+                <%= item.Task %>
+              </span>
+              <div class="item-remove-btn"></div>
+              <div class="item-complete-btn"></div>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+      <% } %>
+    </div>
+  </div>
+</div>

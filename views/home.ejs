@@ -1,0 +1,23 @@
+<% /* eslint-disable */ %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Karla|Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="text/javascript" src="js/list-func.js"></script>
+    <title><%= title  %></title>
+  </head>
+  <body>
+    <%- include header.ejs %>
+    <div id="list-container">
+      <%- include('list', {data: output}) %>
+    </div>
+    <%- include footer.ejs %>
+  </body>
+</html>
